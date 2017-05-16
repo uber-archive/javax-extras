@@ -1,2 +1,2 @@
-# -javax-extras
+# javax-extras
 Extra utilities for javax
