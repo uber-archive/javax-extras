@@ -2,6 +2,14 @@
 
 Extra utilities for javax
 
+## Why a separate artifact?
+
+Aside from reuse - the recommend scope to use this library in is `compileOnly` or `provided`. 
+Modern tooling will recognize annotations in bytecode, and allows you to depend on this in a way 
+that allows tooling to leverage it without bundling it as a part of your library/API.
+
+Related reading: https://medium.com/square-corner-blog/non-null-is-the-default-58ffc0bb9111
+
 ## What's available?
 
 #### EverythingIsNonNullByDefault
