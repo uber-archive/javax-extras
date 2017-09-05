@@ -12,26 +12,21 @@ Related reading: https://medium.com/square-corner-blog/non-null-is-the-default-5
 
 ## What's available?
 
-#### EverythingIsNonNullByDefault
+`EverythingIsNonNullByDefault`
 
-The nuclear option: Everything is NonNull by default. 
-This includes method fields, method return types, method parameters, and local variables.
+- The nuclear option: Everything is NonNull by default. This includes method fields, method return types, method parameters, and local variables.
 
-#### FieldsMethodsAndParametersAreNonNullByDefault
+`FieldsMethodsAndParametersAreNonNullByDefault`
 
-This includes fields, method return types, and method parameters.
+- This includes fields, method return types, and method parameters.
 
-#### FieldsMethodsAndParametersAreNonNullByDefault
+`MethodsAndParametersAreNonNullByDefault`
 
-This includes fields, method return types, and method parameters.
+- This includes method return types and method parameters.
 
-#### MethodsAndParametersAreNonNullByDefault
+`ParametersAreNonnullByDefault`
 
-This includes method return types and method parameters.
-
-#### ParametersAreNonnullByDefault
-
-Is already in the jsr305 findbugs package this depends on. Use it :)
+- Is already in the jsr305 findbugs package this depends on. Use it :)
 
 #### Others
 
