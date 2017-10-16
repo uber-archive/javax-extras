@@ -35,7 +35,7 @@ We're open to suggestions! Feel free to open an issue or propose in a PR.
 Proguard
 --------
 
-As mentioned above, the recommended configuration for javax-extras annotations is `compileOnly` or `provided` scope. This can cause warning in proguard though. Our recommendation is to mark them at `-dontwarn`, as the annotations are only `CLASS`-retained and not in danger of runtime classloader issues.
+As mentioned above, the recommended configuration for javax-extras annotations is `compileOnly` or `provided` scope. This can cause warning in proguard though. Our recommendation is to mark them as `-dontwarn`, as the annotations are only `CLASS`-retained and not in danger of runtime classloader issues.
 
 ```proguard
 -dontwarn com.uber.javaxextras.**
