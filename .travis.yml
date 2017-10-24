@@ -1,0 +1,30 @@
+language: java
+
+jdk:
+  - oraclejdk8
+
+install: ./gradlew clean assemble --stacktrace
+
+script:
+  - ./gradlew check --stacktrace
+
+after_success:
+  - .buildscript/deploy_snapshot.sh
+
+env:
+  global:
+    - secure: "q4AxVXSvTvtRox4VO0h54nZ2C4xymOXN0jN0EWKdLAVPsF6xCRVmCECY8vOlSL5ab0VBCgEHKFZgfSxVWvFnRAobWtuauqymEedVU3WY2gSzRs6QgqGOa7Lo5ZW+8fFPl6Ssfm/TYbPlAtnCcwxvSu7/EPpVockym8sxiULI7Byy4XxuwvjJcK0NaTuy2DI4cAlMXt1LwZSb36asPztadFjkr7sjLz9Zfu/DCVjSytSAsJbR9pBKQ8TxST699mlN6oMHbVtWpGs7QQvlxAFWNkKdlOYBZsaJSQRPmSEIBlLtpPZWqx3HKNBE5C0XMSEhc4rhUvJu83TQ6y+7ym5LfRPs/tPP86I5vWjpWO8SLB0cHu3E2cmC0DqEZI2B/pRnkEomZmfDpwlGaBng8CjrV4tfHdjs58jYCOf7R6mYwwniQ4XMJJwrntY6ucCv2R4XlQFudrAbG+YIHj/NQPKJE+WG6lkNC/+64Lsc+nN/157MZbKik6mShEOWyk0KpJFjMI/QFqHZ2jnxfCa211j+bCpRTQTvPaR+Gq71fswzBaPLnrsvAGQEpNCLhvRorIIaHVw5emt6TottMKbL4ZXEa0uFwXWtrUcLTWIzkLyjgafXuJxkQj1N76vWDIDbI8tO+X/HSyf2DvDGmqGn5RO1Ju/qG3Z0SvaFCKmUYfycJFQ="
+    - secure: "ro/uIdqKKwYH9dliLMSllm2naK+36M31S3dEUK4mYqUGtQVTvumVPZ41jP4MHgoHi+hrOWQ9jQLTYDKLS0rv58jFGGwUJBc6UJ/FWXO73mShcrw1MRJoUh9xteXzztev8PaSJ156YKB22rIuoXf6QkIU2e3tY1k9TngHIs4XvqSlu9nv47/oHsX6vwJmh7iUu/LAphm35ieKo5Y3dVqF7uJM5aO5Z8yvhKPE3HrqCd1aXEx5vrUIu9Jqigy0qJuavS0RJtm32R20lIqFgvjJ7acVaSB3NHUj9sIUdy0Otq02d27Sp8WHSy6CT/jvgdy9taiJE2fthx6mF9zELt6bVDV7aOi7dFI2QyTUpfEIm+0REVPM12IE8Aot4qM7TvekUmMT05cc5/nt2hEnqpaFwz7QPhQGXRR7XFo0J+FRSc8t/c02j94D8prgoD0spy79yU6gm5ytnD9Cg+BDCLpBbCXDMhELgRtfwDMocrYcfUbu13ZLiijYyugWr3UYr+UU1CZ8WomeAxOUm3N6xScp4Zy9qgSoU9rFKZBVkLv+fK3NwI6ompMwqy2XVFSaeYn9cj2Cpmg9WNYoeDc+BgosehfGqhg0yTCHENDXT71gvPuvhloxe2MwOSjkwTEQ2GJFSFt41ZKFtJz7uqh60O+3SNOsJ9TE7POoXkrxIW6BOas="
+
+branches:
+  except:
+    - gh-pages
+
+notifications:
+  email: false
+
+sudo: false
+
+cache:
+  directories:
+    - $HOME/.gradle

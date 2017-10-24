@@ -49,7 +49,7 @@ Download
 compileOnly 'com.uber.javaxextras:javax-extras:x.y.z'
 ```
 
-Snapshots of the development version will eventually be available in [Sonatype's snapshots repository][snapshots].
+Snapshots of the development version are available in [Sonatype's snapshots repository][snapshots].
 
 License
 -------
