@@ -1,3 +1,7 @@
+# DEPRECATED
+
+JSR 305 annotations are not compatible with the Java 9 module system. We recommend using Jetbrains' annotations artifact or (if on Android) the support library annotations.
+
 # javax-extras
 
 Extra utilities for javax
